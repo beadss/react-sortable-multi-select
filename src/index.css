@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.Item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 59px;
+  padding: 0 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #efefef;
+  box-sizing: border-box;
+  user-select: none;
+  outline: none;
+
+  color: #333;
+  font-weight: 400;
+
+  cursor: grab;
+}
+
+.Item:last-child {
+  border-bottom: none;
+}
+
+.Item.selected {
+  background: rgba(216, 232, 251, 0.9);
+  border-bottom-color: #bbcee8;
+}
+
+.Item.moved:before {
+  content: 'Moved! ';
+  background: #4c9ffe;
+}
+
+.Item.selected:focus {
+  border-bottom-color: #4c9ffe;
+}
+
+.Item.sorting {
+  pointer-events: none;
+}
+
+.Item.dragging {
+  border-radius: 3px;
+  border: 1px solid #efefef;
+  box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.2);
+}
+
+.Item.dragging:focus {
+  box-shadow: 0 0px 5px 1px #4c9ffe;
+}
+
+.Item:focus {
+  text-indent: -2px;
+  border: 2px solid #4c9ffe;
+}
+
+.Badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 0.35em 0.5em;
+  border-radius: 0.3rem;
+
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: 600;
+  background-color: #f75959;
+  border: 1px solid #da4553;
+}
+
+.List {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 0;
+  background-color: #f3f3f3;
+  border: 1px solid #efefef;
+  border-radius: 3px;
+  outline: none;
+}
