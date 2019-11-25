@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## react-sortable-hoc에서 제공한 멀티 셀렉션 예제를 기반으로 구현됐습니다.
+https://github.com/clauderic/react-sortable-hoc/tree/master/src/.stories/grouping-items
+
 
 ## Available Scripts
 
